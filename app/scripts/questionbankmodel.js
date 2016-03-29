@@ -198,25 +198,16 @@ QuestionBankModel.prototype.chooseQuestion = function() {
 	var rand=base.getRandomNumb();
 	var rand1=base.getRandomNumb();
 	
-	var addon= this.getAddOm();
-	if(addon!=""){
-		
-		var rand3=base.getRandomNumb();
-
-		addon=addon+rand3;
-		this.answ=rand1+rand+rand3;
-	this.question ="val x = ref "+ rand+"~"+addon+"~val y = (!x1) + "+rand1;
-	return this.question;
-		
-	}else{
+	
 	
 	
 	
 	this.answ=rand1+rand;
 	this.question ="val x = ref "+ rand+"~val y = (!x) + "+rand1;
 	return this.question;
+	
 	}
-	}
+	
 
 QuestionBankModel.prototype.getRandomInt = function(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
